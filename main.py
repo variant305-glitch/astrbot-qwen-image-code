@@ -75,21 +75,8 @@ class MyPlugin(Star):
         s =  extract_image_url(message_chain)
         logger.info(s)
         get_huida =  get_image_jieshi(self,s)
-
+        yield event.plain_result(str(message_str))
         yield event.plain_result(str(get_huida)) # 发送一条纯文本消息
-       # yield event.plain_result(f"发送消息，{message_chain} ")
-
-
-
-
-
-
-
-
-
-
-
-
-       
+    
     async def terminate(self):
         """可选择实现异步的插件销毁方法，当插件被卸载/停用时会调用。"""

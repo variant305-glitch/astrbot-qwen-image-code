@@ -1,8 +1,12 @@
-# helloworld
+# astrbot-qwen-image-code
 
-AstrBot 插件模板
+AstrBot 插件，通过上传代码或日志截图让LLM来分析错误或内容识别
+因为QQ发送消息的限制，所以只能上传图片
+目前没法批量上传，只能上传一张图片，而且还需要把图片url通过公网转发出来
+后续可能会更新通过上传图片的base64编码来对没有公网的支持
+闲着没事自己玩玩
 
-A template plugin for AstrBot plugin feature
+
 
 # 支持
 

@@ -1,12 +1,8 @@
 # helloworld
 
-AstrBot 插件，通过上传代码或日志让LLM来分析错误或内容识别
+AstrBot 插件模板
 
-闲着没事自己玩玩
-
-
-
-
+A template plugin for AstrBot plugin feature
 
 # 支持
 

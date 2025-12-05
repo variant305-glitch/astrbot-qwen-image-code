@@ -1,0 +1,23 @@
+{
+    "api_key": {
+        "description": "千问AI的API密钥",
+        "type": "string",
+        "hint": "请填写你的千问AI API密钥",
+        "default": "",
+        "obvious_hint": true
+    },
+    "model": {
+        "description": "千问AI的图像识别模型",
+        "type": "string",
+        "hint": "千问AI的图像识别模型",
+        "default": "qwen-vl-max",
+        "obvious_hint": false
+    },
+    "base_url": {
+        "description": "千问AI模型的api地址",
+        "type": "string",
+        "hint": "千问AI模型的api地址，如无必要，勿修改默认值",
+        "default": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "obvious_hint": false
+    }
+}

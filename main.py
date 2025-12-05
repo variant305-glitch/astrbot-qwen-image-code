@@ -3,7 +3,7 @@ from astrbot.api.star import Context, Star, register  # pyright: ignore[reportMi
 from astrbot.api import logger  # pyright: ignore[reportMissingImports]
 import os
 from openai import OpenAI
-def get_image_jieshi(self,image_url, ):
+def get_image_jieshi(self,image_url,message_user = "请分析图中日志或代码是做什么的或者有什么错误，并给出建议"):
     try:
         client = OpenAI(
             api_key= self.api_key, #获取配置文件的api_key  
@@ -25,7 +25,7 @@ def get_image_jieshi(self,image_url, ):
                     "type": "image_url",
                     "image_url": {"url": image_url},
                 },
-                {"type": "text", "text":"请用简短的语言分析图中日志或代码是做什么的或者有什么错误，并给出建议，请用中文纯文本回答。"},
+                {"type": "text", "text":message_user + "请用简短的中文纯文本回答。"},
             ],
             },
         ],
@@ -70,12 +70,12 @@ class MyPlugin(Star):
         message_str = event.message_str # 用户发的纯文本消息字符串
         message_chain = event.get_messages() # 用户所发的消息的消息链 # from astrbot.api.message_components import *
         logger.info(message_chain)
-        
+        message_user = message_str[4:]
         s = None
         s =  extract_image_url(message_chain)
         logger.info(s)
-        get_huida =  get_image_jieshi(self,s)
-        yield event.plain_result(str(message_str))
+        get_huida =  get_image_jieshi(self,s,message_user)
+        
         yield event.plain_result(str(get_huida)) # 发送一条纯文本消息
     
     async def terminate(self):

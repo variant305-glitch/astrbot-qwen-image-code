@@ -3,4 +3,5 @@ display_name: qwen_codeimage # 用于展示的名字，可以是方便人类阅�
 desc: 日志代码截图分析，发送给bot图片用来识别图片内容，日志代码分析，提取图片内容。 # 插件简短描述
 version: v1.1 # 插件版本号。格式：v1.1.1 或者 v1.1
 author: variant305-glitch # 作者
-repo: https://github.com/variant305-glitch/astrbot-qwen-image-code.git # 插件的仓库地址
+repo: https://github.com/variant305-glitch/astrbot-qwen-image-code # 插件的仓库地址
+

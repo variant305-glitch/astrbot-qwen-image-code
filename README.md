@@ -20,8 +20,9 @@ AstrBot 插件，通过上传代码或日志截图让LLM来分析错误或内容
     
 # 示例
     ps:我的触发命令是 “云崽”，但是其他机器人的出发命令一般都是 “/” 要注意甄别
-    ![alt text](eg.png)
-    ![alt text](eg-1.png)
+<img src=image/eg-1.png />
+<img src=image/eg.png />
+
     
 
 # 支持
